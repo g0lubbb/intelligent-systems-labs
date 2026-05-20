@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>ЛР2 — Справочники (Голуб Д.В.)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Лабораторная работа №2 — Справочники</h1>
+      <p class="meta">Голуб Дмитрий Васильевич · 2026 г. · 3 курс · 2 группа</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="toolbar">
+      <label for="dict-select">Справочник:</label>
+      <select id="dict-select"></select>
+      <button id="add-btn" type="button">＋ Добавить запись</button>
+    </section>
+
+    <section class="table-wrap">
+      <table id="data-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+      <p id="empty-state" hidden>В справочнике нет записей.</p>
+    </section>
+  </main>
+
+  <dialog id="edit-dialog">
+    <form id="edit-form">
+      <h2 id="dialog-title">Запись</h2>
+      <div id="form-fields"></div>
+      <div class="dialog-actions">
+        <button type="button" id="cancel-btn">Отмена</button>
+        <button type="submit" id="save-btn">Сохранить</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="view-dialog">
+    <h2 id="view-title">Просмотр записи</h2>
+    <dl id="view-content"></dl>
+    <div class="dialog-actions">
+      <button type="button" id="view-close-btn">Закрыть</button>
+    </div>
+  </dialog>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

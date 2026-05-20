@@ -1,0 +1,236 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+
+header {
+  background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
+  color: #fff;
+  padding: 24px 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+header .meta {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+main {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 24px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.toolbar label {
+  font-weight: 500;
+}
+
+.toolbar select,
+.toolbar button,
+button {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+select, input, textarea, button {
+  padding: 8px 12px;
+  border: 1px solid #c4c9d2;
+  border-radius: 6px;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+select:focus, input:focus, textarea:focus {
+  border-color: #2c5364;
+  box-shadow: 0 0 0 3px rgba(44,83,100,0.15);
+}
+
+button {
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #c4c9d2;
+}
+
+button:hover {
+  background: #f0f2f5;
+}
+
+button#add-btn,
+button#save-btn {
+  background: #2c5364;
+  color: #fff;
+  border-color: #2c5364;
+}
+
+button#add-btn:hover,
+button#save-btn:hover {
+  background: #1d3a47;
+}
+
+button.danger {
+  color: #c0392b;
+  border-color: #e3b3ad;
+}
+
+button.danger:hover {
+  background: #fdecea;
+}
+
+.table-wrap {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+thead th {
+  background: #eef0f4;
+  text-align: left;
+  padding: 10px 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #d6dae3;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+thead th:hover {
+  background: #e2e6ee;
+}
+
+thead th.actions {
+  cursor: default;
+  text-align: right;
+}
+
+thead th.actions:hover {
+  background: #eef0f4;
+}
+
+tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eef0f4;
+  vertical-align: top;
+}
+
+tbody tr:hover td {
+  background: #f8f9fb;
+}
+
+td.actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+td.actions button {
+  padding: 4px 10px;
+  font-size: 13px;
+  margin-left: 4px;
+}
+
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td.date { white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+#empty-state {
+  padding: 24px;
+  text-align: center;
+  color: #777;
+}
+
+/* Dialog */
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  max-width: 560px;
+  width: 92%;
+}
+
+dialog::backdrop {
+  background: rgba(0,0,0,0.4);
+}
+
+dialog form,
+#view-dialog {
+  padding: 24px;
+}
+
+dialog h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.field {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 70px;
+  font-family: inherit;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+#view-content {
+  margin: 0;
+}
+
+#view-content dt {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin-top: 10px;
+}
+
+#view-content dd {
+  margin: 2px 0 0;
+  white-space: pre-wrap;
+}
